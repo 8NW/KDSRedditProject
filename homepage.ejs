@@ -20,6 +20,12 @@ homepage.ejs
 </head>
 
 <body>
+<div id="login">
+  <p>Login or Register with:</p>
+
+  <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+<div>
+
     <div class="container">
         <%- include('partials/navbar') %>
         <div class="jumbotron">
@@ -38,5 +44,6 @@ homepage.ejs
         <%- include('partials/footer') %>
     </div>
 </body>
+
 
 </html>
