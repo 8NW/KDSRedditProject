@@ -48,15 +48,15 @@ module.exports = app;
 /*----------------------------Mongoose Schema------------------------------------*/
 
 //Comment Schema
-
-var commentSchema = mongoose.Schema({
-    CommentBody : String,
-    Likes : Number,
-    User : String,
-    Date : Number
-});
-
-var Comment = mongoose.model('Comment', commentSchema);
+//
+// var commentSchema = mongoose.Schema({
+//     CommentBody : String,
+//     Likes : Number,
+//     User : String,
+//     Date : Number
+// });
+//
+// var Comment = mongoose.model('Comment', commentSchema);
 
 
 
