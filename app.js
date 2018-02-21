@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -45,18 +46,8 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-/*----------------------------Mongoose Schema------------------------------------*/
+/*----------------------------Mongoose Schemas------------------------------------*/
 
-//Comment Schema
-//
-// var commentSchema = mongoose.Schema({
-//     CommentBody : String,
-//     Likes : Number,
-//     User : String,
-//     Date : Number
-// });
-//
-// var Comment = mongoose.model('Comment', commentSchema);
 
 
 
