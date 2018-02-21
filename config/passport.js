@@ -3,7 +3,7 @@ var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
 var User       = require('../app/models/user');
 
 // load the auth variables
-var configAuth = require('./auth'); // use this one for testing
+var configAuth = require('./auth.js'); // use this one for testing
 
 module.exports = function(passport) {
 
@@ -100,3 +100,5 @@ module.exports = function(passport) {
         });
 
     }));
+
+  }

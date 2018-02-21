@@ -1,4 +1,4 @@
-ule.exports = function(app, passport) {
+module.exports = function(app, passport) {
 
 // normal routes ===============================================================
 
