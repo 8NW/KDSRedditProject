@@ -4,11 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
 var passport = require('passport');
 var flash = require('connect-flash');
 
 
 require('./config/passport')(passport);
+
+var mongoose = require('mongoose');
+
 
 
 var app = express();
@@ -53,6 +57,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
+<<<<<<< HEAD
 /*----------------------------Mongoose Schema------------------------------------*/
 
 //Comment Schema
@@ -65,3 +70,10 @@ module.exports = app;
 // });
 //
 // var Comment = mongoose.model('Comment', commentSchema);
+=======
+/*----------------------------Mongoose Schemas------------------------------------*/
+
+
+
+
+>>>>>>> f3ca07fb1fc69b6c45ffdfd49b0af68ca4d356d3
