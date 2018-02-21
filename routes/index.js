@@ -11,7 +11,12 @@
 var express = require('express');
 module.exports = function(app, passport) {
 
-// normal routes ===============================================================
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('homepage.ejs', { title: 'home' });
+});
+
 
     // show the home page (will also have our login links)
     app.get('/', function(req, res) {
