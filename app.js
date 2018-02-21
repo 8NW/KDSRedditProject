@@ -56,24 +56,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-<<<<<<< HEAD
-/*----------------------------Mongoose Schema------------------------------------*/
-
-//Comment Schema
-//
-// var commentSchema = mongoose.Schema({
-//     CommentBody : String,
-//     Likes : Number,
-//     User : String,
-//     Date : Number
-// });
-//
-// var Comment = mongoose.model('Comment', commentSchema);
-=======
-/*----------------------------Mongoose Schemas------------------------------------*/
-
-
-
-
->>>>>>> f3ca07fb1fc69b6c45ffdfd49b0af68ca4d356d3
