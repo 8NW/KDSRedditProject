@@ -66,7 +66,7 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Our feed</h1>
-            <p class="lead">Check out the posts below!</p>
+            <p class="lead">Check out the posts below! Make sure to login to see</p>
         </div>
 
         <div class="row">
@@ -80,16 +80,18 @@
     </div>
 
 <script>
-function todo(){
-  if passport.isAuthenticated(){
-    <div class="disqus_thread">
-         <%- include ../partials/comment.ejs %>
-    </div>
-  }else {
-    <p>You are not loggen in. You can log in above to see the comments...</p>
-  }
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated())
+        return next();
 
-}
+        <div class="disqus_thread">
+             <%- include ../partials/comment.ejs %>
+        </div>}
+
+
+
+
+
 </script>
 
 
