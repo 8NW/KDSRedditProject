@@ -13,7 +13,7 @@ module.exports = function(app, passport) {
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+app.get('/', function(req, res, next) {
   res.render('homepage.ejs', { title: 'home' });
 });
 
