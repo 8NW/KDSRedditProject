@@ -46,6 +46,7 @@
 </head>
 
 <body>
+
 <div class="header">
     <img src="Images/Kent.png" alt="Kent Logo" style="width:50px;height:50px;">
   <h2>KDS Reddit</h2>
@@ -61,7 +62,7 @@
   <p>Login or Register with:</p>
 
   <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
-<div>
+</div>
 
     <div class="container">
         <div class="jumbotron">
@@ -79,25 +80,18 @@
         </div>
     </div>
 
-<script>
-function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated())
-        return next();
+    <p> <%=isLogged %> </p>
 
-        <div class="disqus_thread">
-             <%- include ../partials/comment.ejs %>
-        </div>}
-
+<% if (isLogged){ %> <!-- FIXME: DOES NOT WORKS -->
+<p> WORKS BOYS </p>
+  <div class="disqus_thread">
+       <%- include ../partials/comment.ejs %>
+  </div>
 
 
+<% } %>
 
 
-</script>
-
-
-    <!-- <div class="disqus_thread">
-         <%- include ../partials/comment.ejs %>
-    </div> -->
 
     <script id="dsq-count-scr" src="//kdsreddit.disqus.com/count.js" async></script>
     <div class="footer">

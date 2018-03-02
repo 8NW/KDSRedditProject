@@ -14,7 +14,9 @@ module.exports = function(app, passport) {
 
 /* GET home page. */
 app.get('/', function(req, res, next) {
-  res.render('homepage.ejs', { title: 'home' });
+  res.render('homepage.ejs', {
+  isLogged: isLog(req)
+});
 });
 
 
@@ -47,6 +49,15 @@ app.get('/auth/google/callback',
         failureRedirect : '/'
     }));
 };
+function isLog(req) {
+    if (req.isAuthenticated()){
+        return true;}
+  else {
+          return false;
+        }
+
+
+}
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())

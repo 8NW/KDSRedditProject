@@ -5,8 +5,10 @@ module.exports = function(router, passport) {
 
     // show the home page (will also have our login links)
     router.get('/', function(req, res) {
-        res.render('homepage.ejs');
+        res.render('homepage.ejs', {
+        isLogged: true
     });
+});
 
     // google ---------------------------------
 
@@ -16,7 +18,7 @@ module.exports = function(router, passport) {
         // the callback after google has authenticated the user
         router.get('/auth/google/callback',
             passport.authenticate('google', {
-                successRedirect : '/profile',
+                successRedirect : '/',
                 failureRedirect : '/'
             }));
 
@@ -43,7 +45,7 @@ module.exports = function(router, passport) {
         // the callback after google has authorized the user
         router.get('/connect/google/callback',
             passport.authorize('google', {
-                successRedirect : '/profile',
+                successRedirect : '/',
                 failureRedirect : '/'
             }));
 
@@ -57,6 +59,15 @@ module.exports = function(router, passport) {
     });
 
 };
+
+var isLoggedIn(req){
+  if (req.isAuthenticated()) {
+    return true;
+
+  }else {
+    return false;
+  }
+}
 
 // route middleware to ensure user is logged in
 function isLoggedIn(req, res, next) {
