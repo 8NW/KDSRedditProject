@@ -13,7 +13,7 @@ module.exports = function(app, passport) {
 
 
 /* GET home page. */
-app.get('/', function(req, res, next) {
+app.get('/', function(req, res) {
   res.render('homepage.ejs', {
   isLogged: isLog(req)
 });
@@ -27,7 +27,7 @@ app.get('/', function(req, res, next) {
 
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs', {
+        res.render('authenticated.ejs', {
             user : req.user
         });
     });
@@ -49,9 +49,12 @@ app.get('/auth/google/callback',
         failureRedirect : '/'
     }));
 };
+
+console.log('test');
+
 function isLog(req) {
     if (req.isAuthenticated()){
-        return true;}
+        return true; }
   else {
           return false;
         }
@@ -59,9 +62,11 @@ function isLog(req) {
 
 }
 
+
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
         return next();
 
-    res.redirect('/');
+    res.redirect('/fihdbi');
 }
+//WHERE IS ISLOGGED IN

@@ -70,6 +70,7 @@ module.exports = function(passport) {
                         newUser.google.name  = profile.displayName;
                         newUser.google.email = (profile.emails[0].value || '').toLowerCase(); // pull the first email
 
+
                         newUser.save(function(err) {
                             if (err)
                                 return done(err);
@@ -78,6 +79,7 @@ module.exports = function(passport) {
                         });
                     }
                 });
+                
 
             } else {
                 // user already exists and is logged in, we have to link accounts
