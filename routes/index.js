@@ -54,3 +54,20 @@ function isLoggedIn(req, res, next) {
 
     res.redirect('/');
 }
+
+
+var postSchema = mongoose.Schema({
+
+    User_Name : name,
+    Post_Time : postTime,
+    Up_Votes : upVotes,
+
+
+    Comment_Activity_ID: commentID,
+
+    File_Binary : fileBinaryCollection
+    
+});
+
+var Post = mongoose.model('Post', postSchema);
+
