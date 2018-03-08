@@ -9,12 +9,16 @@
 // module.exports = router;
 //
 var express = require('express');
+var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
+
 module.exports = function(app, passport) {
 
 
 /* GET home page. */
-app.get('/', function(req, res, next) {
-  res.render('homepage.ejs', { title: 'home' });
+app.get('/', function(req, res) {
+  res.render('homepage.ejs', {
+  isLogged: isLog(req)
+});
 });
 
 
@@ -25,7 +29,7 @@ app.get('/', function(req, res, next) {
 
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs', {
+        res.render('authenticated.ejs', {
             user : req.user
         });
     });
@@ -48,9 +52,25 @@ app.get('/auth/google/callback',
     }));
 };
 
+
+function isLog(req) {
+    if (req.isAuthenticated){
+      console.log('TRUE IS LOGGED IN');
+        return true; }
+  else {
+    console.log('FALSE');
+          return false;
+        }
+
+
+}
+
+
 function isLoggedIn(req, res, next) {
+  console.log('test1');
     if (req.isAuthenticated())
         return next();
 
-    res.redirect('/');
+    res.redirect('/fihdbi');
 }
+//WHERE IS ISLOGGED IN

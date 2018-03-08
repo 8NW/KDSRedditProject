@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>homepage</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
          background-color: #5D6D7E;
@@ -12,11 +12,11 @@
             padding-bottom: 20px;
         }
         p {
-       
+
     font-family: times;
     font-size: 20px;
     p.solid border-style: solid;
-    
+
 }
 
 
@@ -25,16 +25,16 @@
     font-size: 40px;
     text-align: center;
     background: #EBEDEF;
-    
+
 }
         .jumbotron {
-        
+
         text-align: center;
           margin-top: 10px;
           background-color: #FDFEFE;
-         
+
         }
-        
+
         /* Footer */
 .footer {
     padding: 20px;
@@ -46,27 +46,28 @@
 </head>
 
 <body>
+
 <div class="header">
-    <img src="Images/Kent.png" alt="Kent Logo" style="width:50px;height:50px;"> 
+    <img src="Images/Kent.png" alt="Kent Logo" style="width:50px;height:50px;">
   <h2>KDS Reddit</h2>
 </div>
 <!-- <div class="topnav">
   <a href="#">Most Comments</a>
   <a href="#">Most Liked</a>
   <a href="#">Recent</a>
-  
+
 </div> -->
 
 <div id="login">
   <p>Login or Register with:</p>
 
   <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
-<div>
+</div>
 
     <div class="container">
         <div class="jumbotron">
             <h1>Our feed</h1>
-            <p class="lead">Check out the posts below!</p>
+            <p class="lead">Check out the posts below! Make sure to login to </p>
         </div>
 
         <div class="row">
@@ -79,9 +80,17 @@
         </div>
     </div>
 
-    <div class="disqus_thread">
-         <%- include ../partials/comment.ejs %>
-    </div>
+    <p> <%=isLogged %> </p>
+
+<% if (isLogged){ %>
+  <div class="disqus_thread">
+       <%- include ../partials/comment.ejs %>
+  </div>
+<% } %>
+
+
+
+
     <script id="dsq-count-scr" src="//kdsreddit.disqus.com/count.js" async></script>
     <div class="footer">
   <h2>KDS Reddit Brought To You In Part By: Les Schwab Tires</h2>
