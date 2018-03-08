@@ -9,6 +9,8 @@
 // module.exports = router;
 //
 var express = require('express');
+var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
+
 module.exports = function(app, passport) {
 
 
@@ -50,12 +52,13 @@ app.get('/auth/google/callback',
     }));
 };
 
-console.log('test');
 
 function isLog(req) {
-    if (req.isAuthenticated()){
+    if (req.isAuthenticated){
+      console.log('TRUE IS LOGGED IN');
         return true; }
   else {
+    console.log('FALSE');
           return false;
         }
 
@@ -64,6 +67,7 @@ function isLog(req) {
 
 
 function isLoggedIn(req, res, next) {
+  console.log('test1');
     if (req.isAuthenticated())
         return next();
 

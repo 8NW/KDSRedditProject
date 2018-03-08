@@ -79,7 +79,7 @@ module.exports = function(passport) {
                         });
                     }
                 });
-                
+
 
             } else {
                 // user already exists and is logged in, we have to link accounts

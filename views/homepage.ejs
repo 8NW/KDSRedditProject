@@ -82,14 +82,12 @@
 
     <p> <%=isLogged %> </p>
 
-<% if (isLogged){ %> <!-- FIXME: DOES NOT WORKS -->
-<p> WORKS BOYS </p>
+<% if (isLogged){ %>
   <div class="disqus_thread">
        <%- include ../partials/comment.ejs %>
   </div>
-
-
 <% } %>
+
 
 
 
