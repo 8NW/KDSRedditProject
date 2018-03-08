@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 
 var passport = require('passport');
 var flash = require('connect-flash');
+var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
+
 
 
 require('./config/passport')(passport);
