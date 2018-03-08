@@ -8,6 +8,8 @@
 //
 // module.exports = router;
 //
+
+var mongoose = require('mongoose');
 var express = require('express');
 var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
 
