@@ -78,15 +78,15 @@ function isLoggedIn(req, res, next) {
 
 var postSchema = mongoose.Schema({
 
-    User_Name : name,
-    Post_Time : postTime,
-    Up_Votes : upVotes,
+    User_Name : String,
+    Post_Time : String,
+    Up_Votes : Number,
 
 
-    Comment_Activity_ID: commentID,
+    Comment_Activity_ID: Number,
 
-    File_Binary : fileBinaryCollection
-    
+    // File_Binary : Array
+//
 });
 
 var Post = mongoose.model('Post', postSchema);
