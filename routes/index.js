@@ -8,6 +8,8 @@
 //
 // module.exports = router;
 //
+
+var mongoose = require('mongoose');
 var express = require('express');
 var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
 var mongoose = require('mongoose');
@@ -79,11 +81,24 @@ function isLoggedIn(req, res, next) {
   Post_Time : String,
   Up_Votes : Number,
 
+<<<<<<< HEAD
+=======
+    User_Name : String,
+    Post_Time : String,
+    Up_Votes : Number,
+>>>>>>> master
 
   Comment_Activity_ID: Number,
 
+<<<<<<< HEAD
   // File_Binary : Array
 
+=======
+    Comment_Activity_ID: Number,
+
+    // File_Binary : Array
+//
+>>>>>>> master
 });
 
 
