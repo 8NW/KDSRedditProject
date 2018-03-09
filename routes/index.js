@@ -81,24 +81,6 @@ function isLoggedIn(req, res, next) {
   Post_Time : String,
   Up_Votes : Number,
 
-<<<<<<< HEAD
-=======
-    User_Name : String,
-    Post_Time : String,
-    Up_Votes : Number,
->>>>>>> master
-
-  Comment_Activity_ID: Number,
-
-<<<<<<< HEAD
-  // File_Binary : Array
-
-=======
-    Comment_Activity_ID: Number,
-
-    // File_Binary : Array
-//
->>>>>>> master
 });
 
 
