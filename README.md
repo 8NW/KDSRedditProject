@@ -1,3 +1,1 @@
 # KDSRedditProject
-
-Dog bless
